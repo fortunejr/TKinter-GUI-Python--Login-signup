@@ -1,8 +1,10 @@
+# Importing all the needed modules
 from tkinter import *
 import datetime
 from tkinter import messagebox
 from openpyxl import Workbook
 from openpyxl import load_workbook
+# Creating workbook
 workbook = Workbook()
 sheet = workbook.active
 users_data = []
@@ -12,8 +14,6 @@ ud = {
 wb = load_workbook('localdb.xlsx')
 sheet = wb.active
 xx = datetime.datetime.now()
-z = 0
-# Error ReRun
 
 
 def signup():
@@ -80,7 +80,6 @@ def signup():
     sign_up_dob_label = Label(sign_up_ter, text='Enter DOB in format DD/MM/YYYY no spaces:', font=60).place(x=110, y=260)
     sign_up_dob_input = Entry(sign_up_ter, textvariable=ter_dob, bg='pink', width='50').place(x=110, y=280)
     # Checks
-    # Error from here
     sign_up_submit = Button(sign_up_ter, text='Submit',  fg='red', width=10, command=signup_check).place(x=150, y=320)
 
     sign_up_ter.mainloop()
@@ -129,8 +128,6 @@ def ter_check():
             login()
         else:
             print("Not Included")
-
-
 
 
 while True:
