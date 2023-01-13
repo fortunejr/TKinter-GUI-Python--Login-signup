@@ -138,6 +138,7 @@ while True:
     terminal_info = Label(terminal, text="Enter 1 for Sign-up\n2 for Log-in\n3 for Quit.", font=60).place(x=110)
     terminal_123 = Entry(terminal, textvariable=ter_var, bg='pink', width='15').place(x=110, y=80)
     ter_submit = Button(terminal, text='Submit', fg='red', width=10, command=ter_check).place(x=110, y=110)
+    
+    terminal.mainloop()
     if ter_var.get() == '3':
         break
-    terminal.mainloop()
